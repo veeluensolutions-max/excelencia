@@ -38,25 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
         utm_campaign: utmFields.utm_campaign
     });
 
-    // 2. HEADER INTELIGENTE & BARRA FIXA MOBILE NO SCROLL
+    // 2. HEADER INTELIGENTE NO SCROLL
     const navbar = document.getElementById('navbar');
-    const mobileStickyBar = document.getElementById('mobile-sticky-bar');
 
     window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-
-        // Efeito no header
-        if (scrollY > 40) {
+        if (window.scrollY > 40) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
-        }
-
-        // Exibe barra móvel inferior após 350px de rolagem
-        if (scrollY > 350) {
-            mobileStickyBar.classList.add('visible');
-        } else {
-            mobileStickyBar.classList.remove('visible');
         }
     }, { passive: true });
 

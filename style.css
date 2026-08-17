@@ -1858,44 +1858,8 @@ img {
 }
 
 /* ==========================================================================
-   BARRA FIXA MOBILE & WHATSAPP FLUTUANTE
+   BOTÃO FLUTUANTE DO WHATSAPP
    ========================================================================== */
-.mobile-sticky-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(16px);
-    border-top: 1px solid rgba(52, 211, 153, 0.3);
-    padding: 10px 16px;
-    display: none;
-    z-index: 990;
-    gap: 12px;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
-}
-
-.mobile-sticky-bar.visible {
-    display: flex;
-}
-
-.mobile-bar-btn {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-decoration: none;
-    text-align: center;
-}
-
-.mobile-bar-btn.wa-btn { background: #25D366; color: #FFF; }
-.mobile-bar-btn.cta-btn { background: var(--amber-500); color: #FFF; }
-
 .whatsapp-float-btn {
     position: fixed;
     bottom: 32px;
@@ -1980,8 +1944,13 @@ img {
     .diagnostic-card-wrapper { padding: 24px 18px; }
     .workflow-visual { flex-direction: column; }
     .wf-connector { transform: rotate(90deg); margin: 4px 0; }
-    .whatsapp-float-btn { display: none; } /* Oculta float em prol da sticky bar inferior */
-    .mobile-sticky-bar.visible { display: flex; }
+    .whatsapp-float-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 58px;
+        height: 58px;
+    }
+    .whatsapp-tooltip { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
